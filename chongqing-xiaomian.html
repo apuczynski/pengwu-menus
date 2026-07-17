@@ -227,6 +227,25 @@
     .section{ padding:16px 0; }
     .dish-photo{ width:72px; height:72px; }
   }
+
+  .vhero{ padding:clamp(20px,4vw,40px) 0 0; }
+  .vhero .vwrap{ max-width:1150px; margin:0 auto; padding:0 clamp(12px,4vw,28px); }
+  .vhero .vcard2{ background:#fff; border:4px solid #171310; border-radius:24px; box-shadow:7px 7px 0 #171310; overflow:hidden; display:grid; grid-template-columns:1.5fr 1fr; }
+  .vhero .vbody{ padding:clamp(20px,3.5vw,40px); }
+  .vhero .vzh{ font-family:'Noto Sans SC',system-ui,sans-serif; font-weight:900; font-size:clamp(1.8rem,4.5vw,2.9rem); line-height:1.05; color:#171310; }
+  .vhero .ven{ font-family:'Baloo 2',system-ui,sans-serif; font-weight:700; color:#c9302c; font-size:clamp(1rem,2.2vw,1.4rem); margin-top:2px; }
+  .vhero .vtag{ font-weight:700; color:#a8611a; margin-top:12px; font-size:clamp(0.98rem,1.9vw,1.2rem); }
+  .vhero .vstory{ color:#4b4237; font-size:clamp(0.92rem,1.6vw,1.08rem); line-height:1.62; margin-top:12px; max-width:54ch; }
+  .vhero .vstoryzh{ font-family:'Noto Sans SC',system-ui,sans-serif; color:#6f6350; font-size:0.92rem; line-height:1.75; margin-top:10px; max-width:54ch; }
+  .vhero .vinfo{ background:#fff7ec; border-left:4px solid #171310; padding:clamp(20px,3vw,32px); display:flex; flex-direction:column; gap:12px; }
+  .vhero .vlabel{ font-family:'Fredoka',system-ui,sans-serif; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; font-size:0.72rem; color:#c9302c; }
+  .vhero .vaddr{ font-family:'Noto Sans SC',system-ui,sans-serif; font-weight:700; color:#171310; }
+  .vhero .vaddr-en{ color:#6f6350; font-size:0.86rem; margin-top:2px; }
+  .vhero .vmeta{ color:#4b4237; font-size:0.92rem; }
+  .vhero .vmeta a{ color:#171310; text-decoration:none; border-bottom:1px solid #c9302c; }
+  .vhero .vmap{ margin-top:auto; background:#c9302c; color:#fff; text-decoration:none; font-weight:700; font-size:0.9rem; padding:11px 16px; border-radius:999px; border:2.5px solid #171310; box-shadow:2px 2px 0 #171310; text-align:center; }
+  .vhero .vscroll{ text-align:center; color:#8a7d6c; font-weight:700; font-size:0.85rem; margin-top:14px; }
+  @media (max-width:720px){ .vhero .vcard2{ grid-template-columns:1fr; } .vhero .vinfo{ border-left:none; border-top:4px solid #171310; } }
 </style>
 
 
@@ -248,6 +267,29 @@
     <button class="lang-toggle" id="lang-btn" type="button">中文</button>
   </div>
 </div>
+
+
+<section class="vhero">
+  <div class="vwrap">
+    <div class="vcard2">
+      <div class="vbody">
+        <div class="vzh">山城重庆小面</div>
+        <div class="ven">Chongqing Xiaomian</div>
+        <div class="vtag">Chongqing noodles, the hometown way.</div>
+        <p class="vstory">Chongqing noodles done the way they're done back home. You pick the noodle, the topping, and the heat, and they put it together fresh. If it's your first time, get the classic mala small noodle. It's cheap, it's fast, and it kicks.</p>
+        <p class="vstoryzh">地道的重庆小面，就照着老家的做法来。面型、浇头、辣度都自己选，现点现做。第一次来就点经典的麻辣小面。便宜、快，够劲。</p>
+      </div>
+      <div class="vinfo">
+        <div class="vlabel">Visit · 到店</div>
+        <div><div class="vaddr">上海市杨浦区彰武路</div><div class="vaddr-en">Zhangwu Rd, Yangpu District, Shanghai</div></div>
+        <div class="vmeta">🕑 Daily 7:00–21:00 <span style="opacity:0.6;font-size:0.85em">· to confirm</span></div>
+        
+        <a class="vmap" href="https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E6%9D%A8%E6%B5%A6%E5%8C%BA%E5%BD%B0%E6%AD%A6%E8%B7%AF" target="_blank" rel="noopener">📍 Open in Maps · 地图</a>
+      </div>
+    </div>
+    <div class="vscroll">↓ Full menu below</div>
+  </div>
+</section>
 
 <main class="wrap">
 
@@ -368,25 +410,6 @@
 </main>
 
 
-<section style="padding:clamp(26px,5vw,44px) 0;">
-  <div style="max-width:1150px;margin:0 auto;padding:0 clamp(12px,4vw,28px);">
-    <div style="background:#fff;border:4px solid #171310;border-radius:24px;box-shadow:7px 7px 0 #171310;padding:clamp(18px,3.5vw,32px);display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(20px,4vw,40px);">
-      <div>
-        <div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#c9302c">Our Story · 我们的故事</div>
-        <p style="font-family:'Noto Sans SC',system-ui,sans-serif;font-weight:700;font-size:1.05rem;color:#241c12;margin:8px 0 6px;line-height:1.5">“我从山城来，满口山城味。”地道重庆小面——做法、浇头、辣度自选，现做现拌。</p>
-        <p style="color:#6f6350;font-size:0.92rem;margin:0;line-height:1.55">“I come from the mountain city.” Chongqing xiaomian made the hometown way — pick your noodle style, your topping, and your heat, tossed small-batch to order.</p>
-      </div>
-      <div style="border-left:2px dotted rgba(23,19,16,0.2);padding-left:clamp(16px,3vw,28px);">
-        <div style="font-family:'Fredoka',sans-serif;font-weight:700;font-size:0.72rem;letter-spacing:0.08em;text-transform:uppercase;color:#c9302c">Visit · 到店</div>
-        <div style="font-family:'Noto Sans SC',system-ui,sans-serif;font-weight:700;font-size:1rem;color:#241c12;margin-top:8px">上海市杨浦区彰武路</div>
-        <div style="color:#6f6350;font-size:0.85rem;margin-top:2px">Zhangwu Rd strip, Yangpu District, Shanghai</div>
-        
-        <div style="margin-top:6px;color:#6f6350;font-size:0.88rem">🕑 <span style="color:#241c12">Daily 7:00–21:00</span> <span style="opacity:0.65;font-size:0.82em">· to confirm 待确认</span> <span style="color:#6f6350">每日 7:00–21:00</span></div>
-        <a href="https://www.google.com/maps/search/?api=1&query=%E4%B8%8A%E6%B5%B7%E5%B8%82%E6%9D%A8%E6%B5%A6%E5%8C%BA%E5%BD%B0%E6%AD%A6%E8%B7%AF" target="_blank" rel="noopener" style="display:inline-block;margin-top:12px;background:#c9302c;color:#fff;text-decoration:none;font-weight:700;font-size:0.85rem;padding:9px 16px;border-radius:999px;border:2.5px solid #171310;box-shadow:2px 2px 0 #171310">📍 Open in Maps · 地图导航</a>
-      </div>
-    </div>
-  </div>
-</section>
 <footer>
   <div class="wrap">
     <div class="foot-legal" id="t-f-legal">
